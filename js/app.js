@@ -3745,7 +3745,6 @@
         const socialItems = document.querySelectorAll(".preview-social__item");
         moreSocial.addEventListener("click", (e => {
             if (moreSocial.classList.contains("opened")) socialItems.forEach((item => {
-                console.log(item);
                 if (!item.classList.contains("preview-social__item--active")) {
                     item.style.display = "block";
                     setTimeout((function() {

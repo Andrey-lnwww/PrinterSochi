@@ -779,10 +779,6 @@ input::-webkit-inner-spin-button {
   background-color: #ff284c;
 }
 
-.btn:active {
-  background-color: #d10628;
-}
-
 .btn-secondary {
   color: #272b38;
   text-align: center;
@@ -1164,10 +1160,12 @@ input::-webkit-inner-spin-button {
       -ms-flex-direction: column;
           flex-direction: column;
   row-gap: 0.625rem;
-  min-height: 31.25rem;
+  height: 31.25rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  max-height: 31.25rem;
+  overflow: hidden;
 }
 
 .preview__content > * {
@@ -2070,12 +2068,6 @@ input::-webkit-inner-spin-button {
   transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
 }
 
-.report-swiper__btn:active {
-  -webkit-transform: translateY(0.125rem);
-      -ms-transform: translateY(0.125rem);
-          transform: translateY(0.125rem);
-}
-
 .report-swiper__btn-next {
   -ms-flex-item-align: start;
       align-self: flex-start;
@@ -2155,6 +2147,14 @@ input::-webkit-inner-spin-button {
   .card__bottom {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+  }
+
+  .card__sizes {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    text-align: left;
+    margin-bottom: 0;
   }
 
   .order-list__text {
@@ -2287,14 +2287,6 @@ input::-webkit-inner-spin-button {
 
   .card__text {
     padding: 1.5625rem 1.5625rem 1.875rem 1.5625rem;
-  }
-
-  .card__sizes {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 auto;
-            flex: 0 1 auto;
-    text-align: left;
-    margin-bottom: 0;
   }
 
   .card__btns {
@@ -2481,6 +2473,10 @@ input::-webkit-inner-spin-button {
     background-color: #ff627c;
   }
 
+  .btn:hover:active {
+    background-color: #d10628;
+  }
+
   .btn-secondary:hover {
     color: #fff;
     background-color: #272b38;
@@ -2534,6 +2530,12 @@ input::-webkit-inner-spin-button {
     -webkit-transform: scale(1.1);
         -ms-transform: scale(1.1);
             transform: scale(1.1);
+  }
+
+  .report-swiper__btn:hover:active {
+    -webkit-transform: translateY(0.125rem);
+        -ms-transform: translateY(0.125rem);
+            transform: translateY(0.125rem);
   }
 }
 
